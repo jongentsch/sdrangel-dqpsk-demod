@@ -26,3 +26,4 @@ __pycache__/
 .env.*
 *.pem
 *.key
+/private-values.json

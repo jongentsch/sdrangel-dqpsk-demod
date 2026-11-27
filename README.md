@@ -95,6 +95,8 @@ The import-library helper reads the installed SDRangel DLL exports. It does not 
 
 ## Install
 
+For **Windows x64 / SDRangel 8.2.0 / 24-bit receive builds**, download the compiled DLL from the [v0.1.0 release](https://github.com/jongentsch/sdrangel-dqpsk-demod/releases/tag/v0.1.0). See [binary installation and compatibility](docs/install-binary.md). Python and build tools are not required for the installed plugin.
+
 With SDRangel closed, copy `build/demoddqpsk.dll` into the matching installation's `plugins` directory. Writing to `Program Files` normally requires administrator rights.
 
 For a separate user-local runtime, run:

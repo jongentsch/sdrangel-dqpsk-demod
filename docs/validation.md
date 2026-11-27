@@ -41,3 +41,24 @@ The `.npz` contains complex64 `iq` at 50 kS/s. The native `.sdriq` test expects 
 `dqpsk_gui_preview` can render the channel panel without showing its window or inspecting the user's desktop. It tests normal destruction while the GUI and channel are still valid.
 
 Detailed local test reports and RF recordings are excluded from Git. The public implementation contains generated test logic, not intercepted payloads or receiver configuration.
+
+## v0.1.0 binary release
+
+The Windows x64 release DLL was rebuilt in Release mode, then checked with the
+native plugin loader and the channel GUI creation/render/destruction harness.
+The synthetic pi/4-DQPSK and 6,000-symbol/s reference tests, chunk-boundary test,
+and noise/CW rejection checks passed. These release checks used no physical SDR.
+
+`tools/audit_binary.py` checks printable ASCII and UTF-16 strings, private
+builder-supplied denylist values, PE architecture/imports, CodeView debug records,
+PDB references and COFF symbol tables. The release audit found no personal paths,
+email addresses, machine names, credential patterns or supplied private values.
+The public project URL remains intentional plugin metadata. The ZIP includes the
+exact DLL hash and audit report; PDBs and private development files are omitted.
+
+Six synthetic privacy-gate tests cover a clean PE, an allowed public URL, an ASCII
+home path, a UTF-16 email address, a UTF-16BE denylist value, and CodeView metadata:
+
+```powershell
+python tests/test_binary_audit.py
+```
