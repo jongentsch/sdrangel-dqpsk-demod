@@ -1,0 +1,4 @@
+# Versions used for the initial synthetic and exporter validation (Python 3.12).
+numpy==2.2.3
+scipy==1.15.2
+requests==2.32.3
