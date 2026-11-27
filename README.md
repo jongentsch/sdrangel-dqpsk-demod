@@ -6,9 +6,9 @@ The DSP, constellation display, bounded recorder and control endpoint all run in
 
 This repository contains source, documentation, and synthetic test logic. Captures, decoded research data, machine-specific build files, and personal configuration are kept separately. See [development practices](CONTRIBUTING.md).
 
-![SDRangel Differential QPSK Symbol Demodulator panel showing tuning, phase model, differential phase display and capture controls](docs/images/plugin-panel.png)
+![SDRangel Differential QPSK Symbol Demodulator panel showing a locked live differential-phase constellation, tuning settings and capture controls](docs/images/plugin-panel.png)
 
-*Native plugin panel, shown idle with generic settings and a sample capture directory.*
+*Native plugin panel receiving a live signal, with a locked differential-phase constellation. Generic title and sample capture directory; symbol recording is off.*
 
 ## Modes
 
